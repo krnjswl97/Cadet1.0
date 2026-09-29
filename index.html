@@ -3,90 +3,183 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f6f4ef">
-<meta name="description" content="Cadet — preparation that gets you ready.">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="assets/icon.svg">
-<title>Cadet — Prepare. Progress. Compete.</title>
+<meta name="theme-color" content="#f7f5ef">
+<title>Cadet — Defence Exam Prep</title>
 <style>
-:root{--bg:#f6f4ef;--paper:#fffdf8;--ink:#171717;--muted:#77736b;--line:#dedbd3;--accent:#e9c46a;--soft:#efede6;--green:#4d7c62;--red:#b65b50;--navy:#23364d}
-*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}
-.app{min-height:100vh}.screen{display:none;min-height:100vh}.screen.active{display:block}
-.container{width:min(1120px,calc(100% - 32px));margin:auto}.mobile-shell{width:min(430px,100%);margin:auto;min-height:100vh;background:var(--bg)}
-.top{display:flex;align-items:center;justify-content:space-between;padding:24px 0}.logo{font-weight:800;letter-spacing:-.04em;font-size:25px}.eyebrow{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:700}
-h1{font-size:clamp(40px,8vw,76px);line-height:.96;letter-spacing:-.055em;margin:28px 0 18px}h2{font-size:28px;letter-spacing:-.04em;margin:0 0 10px}h3{font-size:18px;margin:0 0 8px}.lead{font-size:18px;line-height:1.55;color:var(--muted);max-width:620px}
-.btn{border:1px solid var(--ink);background:var(--ink);color:white;border-radius:999px;padding:13px 20px;font-weight:700}.btn.secondary{background:transparent;color:var(--ink)}.btn.full{width:100%}
-.hero{padding:55px 0 30px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}.mock{background:var(--paper);border:1px solid var(--line);border-radius:28px;padding:22px;box-shadow:0 18px 50px #0000000d}.phone{border:8px solid #171717;border-radius:34px;overflow:hidden;background:var(--bg);min-height:560px}.phone-inner{padding:18px}.tiny-nav{display:flex;justify-content:space-between;align-items:center}.char{width:74px;height:74px;border-radius:50%;background:var(--accent);display:grid;place-items:center;font-size:35px}.rank{font-size:13px;color:var(--muted);margin-top:7px}.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px}.stat{font-size:30px;font-weight:800;letter-spacing:-.04em}.grid{display:grid;gap:12px}.grid.two{grid-template-columns:1fr 1fr}.section{padding:70px 0}.feature{min-height:150px}.muted{color:var(--muted)}.divider{height:1px;background:var(--line);margin:18px 0}
-.mobile-header{padding:22px 18px 12px;display:flex;justify-content:space-between;align-items:center}.mobile-content{padding:10px 18px 92px}.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,100%);padding:10px 14px 14px;background:#f6f4efee;backdrop-filter:blur(12px);display:grid;grid-template-columns:repeat(4,1fr);gap:4px;border-top:1px solid var(--line);z-index:5}.navbtn{border:0;background:transparent;color:var(--muted);font-size:11px;padding:8px 2px}.navbtn.active{color:var(--ink);font-weight:800}.progress{height:7px;border-radius:10px;background:#e3e0d8;overflow:hidden}.progress>i{display:block;height:100%;background:var(--ink);border-radius:10px}.question{font-size:23px;line-height:1.35;font-weight:700;margin:25px 0}.option{padding:15px;border:1px solid var(--line);border-radius:15px;background:var(--paper);margin:9px 0;text-align:left;width:100%}.option.selected{border-color:var(--ink);background:#ece9e1}.pill{display:inline-block;padding:7px 10px;background:var(--soft);border-radius:99px;font-size:12px;font-weight:700}.rankbig{font-size:50px;font-weight:900;letter-spacing:-.06em}.list{display:grid;gap:9px}.row{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:13px 0;border-bottom:1px solid var(--line)}.avatar{width:38px;height:38px;border-radius:50%;background:var(--soft);display:grid;place-items:center;font-weight:800}.rowleft{display:flex;gap:11px;align-items:center}.input{width:100%;padding:14px;border:1px solid var(--line);border-radius:13px;background:var(--paper);outline:none}.back{border:0;background:none;font-size:22px}.center{text-align:center}.spacer{height:20px}
-@media(max-width:760px){.hero-grid{grid-template-columns:1fr}.hero{padding:30px 0}.desktop-only{display:none}.section{padding:45px 0}h1{font-size:48px}.container{width:min(430px,calc(100% - 32px))}}
+:root{
+  --bg:#f7f5ef; --paper:#fffdf8; --ink:#191918; --muted:#77746d;
+  --line:#dfddd5; --yellow:#f4c95d; --lav:#dcd7ff; --peach:#ffd6bd;
+  --mint:#cceadf; --blue:#cfe1ff; --coral:#ff9e86; --green:#77c99b;
+  --shadow:0 14px 40px rgba(35,32,25,.08);
+  --r:28px;
+}
+*{box-sizing:border-box} html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+.app{max-width:430px;margin:auto;min-height:100dvh;padding-bottom:88px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:22px 22px 12px}
+.brand{font-size:27px;font-weight:800;letter-spacing:-1px}.topicons{display:flex;gap:10px}
+.iconbtn{width:42px;height:42px;border:1px solid var(--line);background:var(--paper);border-radius:50%;display:grid;place-items:center}
+.iconbtn svg{width:20px;height:20px}
+.page{padding:0 18px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:#77736a}
+h1,h2,h3,p{margin:0} h1{font-size:38px;line-height:.98;letter-spacing:-2px} h2{font-size:24px;letter-spacing:-.8px} h3{font-size:17px}
+.muted{color:var(--muted)} .small{font-size:13px}.tiny{font-size:11px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.hero{padding:18px;position:relative;overflow:hidden;background:linear-gradient(145deg,#eeeaff 0%,#fffaf0 65%)}
+.hero .copy{position:relative;z-index:2;max-width:230px}
+.hero .eyebrow{margin-bottom:8px}.hero h2{font-size:27px;line-height:1.03;margin-bottom:8px}
+.mascot{position:absolute;right:-4px;bottom:-15px;width:170px;height:170px}
+.mascot .blob{fill:#9b86ee}.mascot .belly{fill:#fff0d0}.mascot .eye{fill:#191918}.mascot .cheek{fill:#ffad9d}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ink);color:white;border-radius:999px;padding:12px 18px;font-weight:750;margin-top:15px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.section{margin-top:15px}.rankcard{padding:18px;display:flex;align-items:center;gap:16px}
+.rankbadge{width:78px;height:78px;border-radius:25px;background:var(--yellow);display:grid;place-items:center;position:relative;flex:none}
+.rankbadge:after{content:"";width:45px;height:45px;border:3px solid #191918;border-radius:50%;position:absolute;opacity:.12}
+.rankbadge svg{width:40px;height:40px}
+.rankname{font-size:30px;font-weight:850;letter-spacing:-1.5px}.rankline{margin-top:8px;height:7px;background:#e8e5dc;border-radius:99px;overflow:hidden}.rankline span{display:block;height:100%;width:78%;background:#191918;border-radius:99px}
+.journey{padding:18px;background:linear-gradient(135deg,#fffdf8,#f0edff)}
+.journeytop{display:flex;justify-content:space-between;align-items:start}.arrow{width:40px;height:40px;border-radius:50%;background:#191918;color:#fff;display:grid;place-items:center}
+.path{display:flex;gap:7px;margin-top:18px;align-items:center}.dot{width:28px;height:28px;border-radius:50%;background:#dedbd1;display:grid;place-items:center;font-size:11px;font-weight:800}.dot.done{background:var(--green)}.dot.current{background:var(--yellow);box-shadow:0 0 0 5px #f7edc9}.pathline{height:3px;background:#dedbd1;flex:1}
+.stat{padding:17px;min-height:118px}.stat .num{font-size:34px;font-weight:850;letter-spacing:-1.5px;margin-top:5px}.stat .label{font-size:13px;color:var(--muted);margin-top:2px}
+.report{padding:18px}.delta{font-size:28px;font-weight:850;letter-spacing:-1px}.pill{display:inline-flex;padding:6px 9px;border-radius:999px;font-size:11px;font-weight:800;background:#e9f6ed;margin-top:9px}
+.focusrow{display:flex;align-items:center;gap:12px;padding:13px 0;border-top:1px solid var(--line)}.focusrow:first-of-type{border-top:0}.subject{width:75px;font-size:13px;font-weight:700}.bar{flex:1;height:8px;background:#e8e5dc;border-radius:99px;overflow:hidden}.bar i{display:block;height:100%;border-radius:99px;background:#191918}.score{width:30px;text-align:right;font-size:12px;font-weight:800}
+.bottom{position:fixed;z-index:10;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,100%);background:rgba(255,253,248,.94);backdrop-filter:blur(18px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);padding:10px 10px calc(10px + env(safe-area-inset-bottom))}
+.nav{display:grid;place-items:center;gap:4px;color:#858179;font-size:11px;font-weight:700}.nav.active{color:#191918}.nav svg{width:22px;height:22px}
+.screen{display:none}.screen.active{display:block}
+.subhead{padding:10px 0 16px}.back{display:flex;align-items:center;gap:8px;font-weight:750;margin-bottom:18px}
+.testcard{padding:18px}.testmeta{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.timer{background:#191918;color:white;padding:8px 12px;border-radius:999px;font-weight:800;font-size:12px}.qnum{font-size:12px;font-weight:800;color:var(--muted)}
+.question{font-size:25px;line-height:1.12;letter-spacing:-.7px;margin:10px 0 18px}
+.option{display:flex;align-items:center;gap:12px;width:100%;padding:14px;border:1px solid var(--line);border-radius:17px;margin:9px 0;background:#fff}.option .letter{width:31px;height:31px;border-radius:50%;background:#f0eee7;display:grid;place-items:center;font-weight:800}.option.selected{border-color:#191918;background:#f3f0ff}.option.selected .letter{background:#191918;color:#fff}
+.qnav{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:15px}.qdot{height:36px;border-radius:12px;background:#eeeae0;display:grid;place-items:center;font-size:12px;font-weight:800}.qdot.done{background:#cceadf}.qdot.now{background:#191918;color:white}
+.arenaHero{padding:20px;background:linear-gradient(145deg,#ffd8c4,#fff5e8);overflow:hidden;position:relative}.arenaHero .mini-mascot{position:absolute;right:10px;bottom:-2px;width:110px}
+.challenge{padding:16px;display:flex;align-items:center;gap:13px}.avatar{width:46px;height:46px;border-radius:50%;background:var(--lav);display:grid;place-items:center;font-weight:900}.challenge .grow{flex:1}.roundbtn{background:#191918;color:#fff;border-radius:999px;padding:9px 13px;font-size:12px;font-weight:800}
+.leader{padding:16px}.leaderrow{display:flex;align-items:center;gap:11px;padding:12px 0;border-bottom:1px solid var(--line)}.leaderrow:last-child{border-bottom:0}.rankno{width:24px;font-weight:850}.leadavatar{width:36px;height:36px;border-radius:50%;background:var(--peach);display:grid;place-items:center;font-size:12px;font-weight:900}.leadname{flex:1;font-size:13px;font-weight:700}.leadscore{font-weight:850}
+.reportHero{padding:19px;background:linear-gradient(145deg,#d8f0e5,#fffdf8)}.bigscore{font-size:56px;font-weight:900;letter-spacing:-4px}.chart{height:100px;display:flex;align-items:end;gap:7px;margin-top:15px}.col{flex:1;background:#191918;border-radius:8px 8px 2px 2px;min-height:18px}.col:nth-child(1){height:34%}.col:nth-child(2){height:45%}.col:nth-child(3){height:41%}.col:nth-child(4){height:57%}.col:nth-child(5){height:62%}.col:nth-child(6){height:73%}.col:nth-child(7){height:82%}
+.profileHero{padding:22px;text-align:center;background:linear-gradient(145deg,#ece7ff,#fffdf8)}.profileAvatar{width:92px;height:92px;border-radius:31px;background:var(--yellow);margin:0 auto 12px;display:grid;place-items:center}.profileAvatar svg{width:62px}.menuCard{overflow:hidden}.menuItem{display:flex;align-items:center;gap:13px;padding:17px;border-bottom:1px solid var(--line)}.menuItem:last-child{border-bottom:0}.menuIcon{width:38px;height:38px;border-radius:13px;background:#f0eee7;display:grid;place-items:center}.menuItem span:nth-child(2){flex:1;font-weight:700}.chev{color:#8a877f}
+.onboard{min-height:100dvh;padding:24px 20px 28px;display:flex;flex-direction:column}.onboardTop{display:flex;justify-content:space-between;align-items:center}.progress{height:5px;background:#e4e1d9;border-radius:99px;margin:18px 0}.progress i{display:block;height:100%;width:32%;background:#191918;border-radius:99px}.onboardArt{height:310px;border-radius:36px;background:linear-gradient(145deg,#e6e1ff,#fff0d7);position:relative;overflow:hidden;display:grid;place-items:center}.onboardArt svg{width:240px}.choices{display:grid;gap:10px;margin-top:20px}.choice{padding:17px;border:1px solid var(--line);border-radius:19px;background:var(--paper);display:flex;justify-content:space-between;align-items:center;font-weight:800}.choice.selected{background:#191918;color:white;border-color:#191918}.full{width:100%;margin-top:auto}.hint{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+@media(min-width:700px){body{padding:25px}.app{box-shadow:0 20px 80px rgba(0,0,0,.12);border-radius:34px;overflow:hidden;background:var(--bg)}.bottom{position:absolute;border-radius:0 0 34px 34px}.app{position:relative}}
 </style>
 </head>
 <body>
 <div class="app">
+  <div id="home" class="screen active">
+    <header class="top"><div class="brand">Cadet</div><div class="topicons"><button class="iconbtn" onclick="show('profile')">⌕</button><button class="iconbtn" onclick="show('profile')">⋯</button></div></header>
+    <main class="page">
+      <div class="section hero card">
+        <div class="copy"><div class="eyebrow">GOOD MORNING</div><h2>Ready when you are,<br>Karan.</h2><p class="muted small">A little progress today is enough.</p><button class="cta" onclick="show('test')">Continue <span>→</span></button></div>
+        <svg class="mascot" viewBox="0 0 180 180" aria-hidden="true"><path class="blob" d="M39 120C16 95 23 57 48 38c24-19 59-19 83-2 26 18 34 53 22 83-12 31-44 45-75 39-16-3-29-17-39-38z"/><ellipse class="belly" cx="92" cy="103" rx="43" ry="36"/><circle class="eye" cx="75" cy="94" r="4"/><circle class="eye" cx="110" cy="94" r="4"/><ellipse class="cheek" cx="67" cy="106" rx="7" ry="4"/><ellipse class="cheek" cx="118" cy="106" rx="7" ry="4"/><path d="M85 111q7 7 14 0" fill="none" stroke="#191918" stroke-width="3" stroke-linecap="round"/></svg>
+      </div>
+      <div class="section rankcard card">
+        <div class="rankbadge"><svg viewBox="0 0 50 50"><path d="M25 7l5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z" fill="#191918"/></svg></div>
+        <div style="flex:1"><div class="eyebrow">CURRENT RANK</div><div class="rankname">Captain</div><div class="small muted">78 / 100 difficulty</div><div class="rankline"><span></span></div></div>
+      </div>
+      <div class="section journey card" onclick="show('progress')"><div class="journeytop"><div><div class="eyebrow">CONTINUE YOUR JOURNEY</div><h2>Keep moving forward</h2><p class="small muted" style="margin-top:5px">Mixed reasoning · 10 questions</p></div><div class="arrow">→</div></div><div class="path"><div class="dot done">✓</div><div class="pathline"></div><div class="dot done">✓</div><div class="pathline"></div><div class="dot current">3</div><div class="pathline"></div><div class="dot">4</div><div class="pathline"></div><div class="dot">5</div></div></div>
+      <div class="section grid2"><div class="stat card"><div class="eyebrow">STREAK</div><div class="num">5 days</div><div class="label">this week · keep it going</div></div><div class="stat card"><div class="eyebrow">UPCOMING</div><div class="num">3d</div><div class="label">Weekly Trial</div></div></div>
+      <div class="section report card"><div class="eyebrow">YOUR LATEST REPORT</div><div class="delta">+12% since your last test</div><span class="pill">↑ improving</span><p class="small muted" style="margin:12px 0 8px">Maths hasn't moved much. This is where you should focus next.</p><button class="cta" style="margin-top:5px" onclick="show('report')">View report →</button></div>
+      <div class="section card" style="padding:16px"><div class="eyebrow">TODAY'S FOCUS</div><div class="focusrow"><div class="subject">Maths</div><div class="bar"><i style="width:42%"></i></div><div class="score">42%</div></div><div class="focusrow"><div class="subject">Reasoning</div><div class="bar"><i style="width:76%"></i></div><div class="score">76%</div></div><div class="focusrow"><div class="subject">GK</div><div class="bar"><i style="width:64%"></i></div><div class="score">64%</div></div></div>
+    </main>
+  </div>
 
-<section id="landing" class="screen active">
-<div class="container">
-<header class="top"><div class="logo">cadet.</div><div><button class="btn secondary" onclick="show('login')">Log in</button></div></header>
-<div class="hero"><div class="hero-grid"><div><div class="eyebrow">A better way to prepare</div><h1>Prepare like it matters.</h1><p class="lead">Cadet turns preparation into a clear journey — from your first question to the confidence of a real examination.</p><div class="spacer"></div><button class="btn" onclick="show('onboarding')">Get started →</button></div>
-<div class="mock"><div class="phone"><div class="phone-inner"><div class="tiny-nav"><b>cadet.</b><span class="pill">Your journey</span></div><div style="margin:28px 0"><div class="char">★</div><div class="rank">CURRENT RANK</div><div class="rankbig">Captain</div></div><div class="card"><div class="eyebrow">Continue your journey</div><h3 style="margin-top:7px">Keep moving forward.</h3><div class="progress"><i style="width:68%"></i></div><p class="muted" style="font-size:13px">68% through your current level</p><button class="btn full" onclick="show('home')">Continue</button></div></div></div></div></div></div>
-<div class="section"><div class="eyebrow">Why Cadet</div><h2>Less noise. More progress.</h2><div class="grid two" style="margin-top:20px"><div class="card feature"><h3>A clear path</h3><p class="muted">Know what to do next instead of staring at an endless syllabus.</p></div><div class="card feature"><h3>Real progress</h3><p class="muted">Your rank reflects the difficulty you can actually handle.</p></div><div class="card feature"><h3>Better diagnosis</h3><p class="muted">Understand whether a miss came from knowledge, time or pressure.</p></div><div class="card feature"><h3>Compete when ready</h3><p class="muted">Move into weekly examination conditions when you've earned it.</p></div></div></div>
-<div class="section"><div class="eyebrow">About</div><h2>Built for students who want to show up.</h2><p class="lead">Cadet is designed around one simple idea: preparation should make you feel more capable, not more overwhelmed.</p></div>
-<footer class="section" style="padding-top:20px"><div class="divider"></div><div class="top"><span class="muted">© Cadet</span><span class="muted">Contact us</span></div></footer>
-</div></section>
+  <div id="progress" class="screen">
+    <header class="top"><button class="iconbtn" onclick="show('home')">←</button><div class="brand">Your journey</div><div style="width:42px"></div></header>
+    <main class="page">
+      <div class="subhead"><div class="eyebrow">YOUR PATH</div><h1>Earn your next rank.</h1><p class="muted" style="margin-top:9px">The questions get harder as you get better. No XP. No meaningless points.</p></div>
+      <div class="card" style="padding:18px;background:linear-gradient(145deg,#fffdf8,#e8e4ff)">
+        <div class="eyebrow">CURRENT LEVEL</div><div style="display:flex;justify-content:space-between;align-items:end"><h2>Captain</h2><strong>78 / 100</strong></div><div class="rankline" style="margin-top:12px"><span style="width:78%"></span></div>
+      </div>
+      <div class="section"><div class="eyebrow">THE ROAD AHEAD</div>
+      <div style="position:relative;padding:20px 8px 5px 20px">
+        <div style="position:absolute;left:37px;top:38px;bottom:35px;width:3px;background:#ddd9cf"></div>
+        <div class="rankcard card" style="margin-bottom:12px;position:relative"><div class="rankbadge" style="background:#cceadf;width:54px;height:54px"><b>✓</b></div><div><div class="eyebrow">COMPLETED</div><h3>Lieutenant</h3><p class="small muted">Foundation · 60 difficulty</p></div></div>
+        <div class="rankcard card" style="margin-bottom:12px;position:relative;border:2px solid #191918"><div class="rankbadge" style="width:54px;height:54px"><b>★</b></div><div><div class="eyebrow">YOU ARE HERE</div><h3>Captain</h3><p class="small muted">Mixed reasoning · 78 difficulty</p></div></div>
+        <div class="rankcard card" style="margin-bottom:12px;position:relative"><div class="rankbadge" style="background:#ece9df;width:54px;height:54px"><b>?</b></div><div><div class="eyebrow">NEXT</div><h3>Major</h3><p class="small muted">Advanced mixed · 90+ difficulty</p></div></div>
+        <div class="rankcard card" style="position:relative"><div class="rankbadge" style="background:#ece9df;width:54px;height:54px"><b>◎</b></div><div><div class="eyebrow">UNLOCKED AFTER</div><h3>Competitive Trial</h3><p class="small muted">Timed, ranked weekly exam</p></div></div>
+      </div></div>
+    </main>
+  </div>
 
-<section id="login" class="screen"><div class="mobile-shell"><div class="mobile-header"><button class="back" onclick="show('landing')">‹</button><b>cadet.</b><span></span></div><div class="mobile-content" style="padding-top:70px"><div class="eyebrow">Welcome back</div><h1 style="font-size:44px">Pick up where you left off.</h1><p class="lead">Your journey is waiting.</p><div class="spacer"></div><input class="input" placeholder="Email"><div class="spacer"></div><input class="input" placeholder="Password" type="password"><div class="spacer"></div><button class="btn full" onclick="show('home')">Log in</button><p class="center muted">Don't have an account? <b onclick="show('onboarding')" style="color:var(--ink)">Get started</b></p></div></div></section>
+  <div id="test" class="screen">
+    <header class="top"><button class="iconbtn" onclick="show('home')">←</button><div class="brand">Mixed reasoning</div><button class="iconbtn">⋯</button></header>
+    <main class="page">
+      <div class="testcard card">
+        <div class="testmeta"><div class="qnum">QUESTION 4 OF 10</div><div class="timer">08:42</div></div>
+        <div class="progress"><i style="width:40%"></i></div>
+        <div class="eyebrow">DIFFICULTY · 78 / 100</div>
+        <div class="question">If a train travels 240 km in 3 hours, how far will it travel in 45 minutes?</div>
+        <button class="option" onclick="selectOption(this)"><span class="letter">A</span><span>45 km</span></button>
+        <button class="option" onclick="selectOption(this)"><span class="letter">B</span><span>60 km</span></button>
+        <button class="option" onclick="selectOption(this)"><span class="letter">C</span><span>75 km</span></button>
+        <button class="option" onclick="selectOption(this)"><span class="letter">D</span><span>90 km</span></button>
+        <div class="qnav"><div class="qdot done">✓</div><div class="qdot done">✓</div><div class="qdot done">✓</div><div class="qdot now">4</div><div class="qdot">5</div><div class="qdot">6</div><div class="qdot">7</div><div class="qdot">8</div><div class="qdot">9</div><div class="qdot">10</div></div>
+        <div style="display:flex;justify-content:space-between;margin-top:18px"><button class="cta" style="margin:0;background:#eeeae2;color:#191918">← Back</button><button class="cta" style="margin:0" onclick="show('report')">Next →</button></div>
+      </div>
+    </main>
+  </div>
 
-<section id="onboarding" class="screen"><div class="mobile-shell"><div class="mobile-header"><button class="back" onclick="show('landing')">‹</button><span class="eyebrow">01 / 04</span><span></span></div><div class="mobile-content" style="padding-top:40px"><div class="eyebrow">Let's begin</div><h1 style="font-size:44px">How do you want to prepare?</h1><p class="lead">We'll shape the experience around you.</p><div class="spacer"></div><button class="card" style="width:100%;text-align:left" onclick="show('assessment')"><h3>Start from the beginning</h3><p class="muted">Build your ability step by step.</p></button><div class="spacer"></div><button class="card" style="width:100%;text-align:left" onclick="show('home')"><h3>I already know where I stand</h3><p class="muted">Take a test and jump into the right place.</p></button></div></div></section>
+  <div id="arena" class="screen">
+    <header class="top"><div class="brand">Arena</div><button class="iconbtn">⌕</button></header>
+    <main class="page">
+      <div class="arenaHero card"><div class="eyebrow">NEXT COMPETITIVE TRIAL</div><h1 style="font-size:34px;margin-top:6px">Sunday · 10:00 AM</h1><p class="muted small" style="margin-top:8px">30 questions · 30 minutes · ranked</p><button class="cta">View details →</button><svg class="mini-mascot" viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="#9b86ee"/><circle cx="43" cy="54" r="4"/><circle cx="76" cy="54" r="4"/><path d="M48 70q12 10 24 0" fill="none" stroke="#191918" stroke-width="3" stroke-linecap="round"/><path d="M35 33l25-17 25 17" fill="#f4c95d" stroke="#191918" stroke-width="3"/></svg></div>
+      <div class="section card challenge"><div class="avatar">R</div><div class="grow"><div class="eyebrow">CHALLENGE</div><h3>Rohan is online</h3><p class="small muted">Reasoning · 10 questions</p></div><button class="roundbtn">Challenge</button></div>
+      <div class="section card challenge"><div class="avatar" style="background:#cceadf">M</div><div class="grow"><div class="eyebrow">MOCK TEST</div><h3>Practice under pressure</h3><p class="small muted">Timed · 20 questions</p></div><button class="roundbtn">Start</button></div>
+      <div class="section leader card"><div class="eyebrow">THIS WEEK</div><h2 style="margin:5px 0 4px">Leaderboard</h2>
+        <div class="leaderrow"><div class="rankno">1</div><div class="leadavatar">A</div><div class="leadname">Aarav</div><div class="leadscore">94</div></div>
+        <div class="leaderrow"><div class="rankno">2</div><div class="leadavatar" style="background:#cfe1ff">S</div><div class="leadname">Simran</div><div class="leadscore">91</div></div>
+        <div class="leaderrow"><div class="rankno">3</div><div class="leadavatar" style="background:#ffd6bd">K</div><div class="leadname">Karan</div><div class="leadscore">88</div></div>
+        <div class="leaderrow"><div class="rankno">4</div><div class="leadavatar" style="background:#ece9df">R</div><div class="leadname">Rishi</div><div class="leadscore">84</div></div>
+      </div>
+    </main>
+  </div>
 
-<section id="assessment" class="screen"><div class="mobile-shell"><div class="mobile-header"><span class="eyebrow">Starting assessment</span><span>1 / 5</span></div><div class="mobile-content"><div class="progress"><i style="width:20%"></i></div><div class="question">Which number completes the sequence?</div><div class="card center" style="font-size:28px;margin-bottom:18px">2 · 4 · 8 · 16 · ?</div><button class="option" onclick="nextAssessment()">20</button><button class="option" onclick="nextAssessment()">24</button><button class="option" onclick="nextAssessment()">32</button><button class="option" onclick="nextAssessment()">36</button><p class="center muted">Short questions. No pressure. We're finding your starting point.</p></div></div></section>
+  <div id="report" class="screen">
+    <header class="top"><button class="iconbtn" onclick="show('home')">←</button><div class="brand">Your report</div><button class="iconbtn">⋯</button></header>
+    <main class="page">
+      <div class="reportHero card"><div class="eyebrow">PROGRESS SINCE LAST TEST</div><div class="bigscore">+12%</div><p class="muted small">You're getting better at harder questions. Your next opportunity is speed.</p><div class="chart"><i class="col"></i><i class="col"></i><i class="col"></i><i class="col"></i><i class="col"></i><i class="col"></i><i class="col"></i></div></div>
+      <div class="section card" style="padding:18px"><div class="eyebrow">WHERE TO FOCUS</div><h2 style="margin:4px 0 12px">Don't study everything.</h2><div class="focusrow"><div class="subject">Maths</div><div class="bar"><i style="width:42%"></i></div><div class="score">42%</div></div><div class="focusrow"><div class="subject">Reasoning</div><div class="bar"><i style="width:76%"></i></div><div class="score">76%</div></div><div class="focusrow"><div class="subject">GK</div><div class="bar"><i style="width:64%"></i></div><div class="score">64%</div></div></div>
+      <div class="section card" style="padding:18px"><div class="eyebrow">WHY DID YOU MISS QUESTIONS?</div><h2 style="margin:4px 0 12px">Your diagnosis</h2><div class="grid3"><div class="stat" style="padding:10px;background:#fff0e8;border:0"><div class="num" style="font-size:26px">6</div><div class="label">time</div></div><div class="stat" style="padding:10px;background:#ece9ff;border:0"><div class="num" style="font-size:26px">3</div><div class="label">concept</div></div><div class="stat" style="padding:10px;background:#e6f4ed;border:0"><div class="num" style="font-size:26px">1</div><div class="label">pressure</div></div></div><p class="small muted" style="margin-top:13px">You knew more than your score shows. Work on solving familiar questions faster.</p></div>
+      <div class="section card" style="padding:18px"><div class="eyebrow">LAST TEST</div><h2 style="margin:4px 0">Question by question</h2><p class="small muted" style="margin-top:6px">Review what happened, not just what was right.</p><button class="cta" style="width:100%">Analyze test →</button></div>
+    </main>
+  </div>
 
-<section id="rank" class="screen"><div class="mobile-shell"><div class="mobile-content center" style="padding-top:80px"><div class="eyebrow">Your starting point</div><div class="char" style="margin:25px auto">★</div><h1 style="font-size:55px">Lieutenant</h1><p class="lead" style="margin:auto">You're ready to start here. Your rank will rise as the difficulty you can solve rises.</p><div class="spacer"></div><button class="btn" onclick="show('home')">Enter my journey →</button></div></div></section>
+  <div id="profile" class="screen">
+    <header class="top"><button class="iconbtn" onclick="show('home')">←</button><div class="brand">Profile</div><button class="iconbtn">⚙</button></header>
+    <main class="page">
+      <div class="profileHero card"><div class="profileAvatar"><svg viewBox="0 0 80 80"><circle cx="40" cy="38" r="22" fill="#9b86ee"/><circle cx="32" cy="36" r="3"/><circle cx="48" cy="36" r="3"/><path d="M32 46q8 7 16 0" fill="none" stroke="#191918" stroke-width="2.5" stroke-linecap="round"/></svg></div><h2>Karan</h2><p class="muted small">Captain · 78 difficulty</p></div>
+      <div class="section menuCard card"><div class="menuItem"><div class="menuIcon">◷</div><span>Test history</span><span class="chev">›</span></div><div class="menuItem"><div class="menuIcon">▣</div><span>Payments & plan</span><span class="chev">›</span></div><div class="menuItem"><div class="menuIcon">⌁</div><span>Mindset & preparation</span><span class="chev">›</span></div><div class="menuItem"><div class="menuIcon">⚙</div><span>Settings</span><span class="chev">›</span></div></div>
+      <div class="section card" style="padding:18px;background:#fff1dc"><div class="eyebrow">A SMALL REMINDER</div><h2 style="margin-top:5px">You don't have to win today.</h2><p class="small muted" style="margin-top:8px">You just have to show up and understand where you are.</p></div>
+    </main>
+  </div>
 
-<section id="home" class="screen"><div class="mobile-shell"><div class="mobile-header"><div><div class="eyebrow">Good morning</div><b>Karan</b></div><div class="char" style="width:48px;height:48px;font-size:22px">★</div></div><div class="mobile-content">
-<div class="card" style="margin-bottom:12px"><div class="eyebrow">Current rank</div><div class="stat">Captain</div><p class="muted">You're handling questions at 78 / 100 difficulty.</p><div class="progress"><i style="width:78%"></i></div></div>
-<div class="card" onclick="show('journey')"><div class="eyebrow">Continue your journey</div><h3>Keep moving forward →</h3><p class="muted">Next: mixed reasoning · 10 questions</p></div>
-<div class="grid two" style="margin-top:12px"><div class="card"><div class="eyebrow">Streak</div><div class="stat">5 days</div><span class="muted">this week</span></div><div class="card"><div class="eyebrow">Upcoming</div><div class="stat">3d</div><span class="muted">Weekly Trial</span></div></div>
-<div class="card" style="margin-top:12px"><div class="eyebrow">Your latest report</div><h3>+12% since your last test</h3><p class="muted">Maths hasn't moved much. This is where you should focus next.</p><button class="btn secondary" onclick="show('report')">View report →</button></div>
-<div class="card" style="margin-top:12px" onclick="show('mindset')"><div class="eyebrow">Mindset</div><h3>Don't confuse studying with progress.</h3><p class="muted">A two-minute reset before you begin.</p></div>
-</div><Nav/></div></section>
+  <div id="onboarding" class="screen">
+    <div class="onboard">
+      <div class="onboardTop"><div class="brand">Cadet</div><button onclick="show('home')" class="small">Skip</button></div>
+      <div class="progress"><i></i></div>
+      <div class="eyebrow">LET'S START SOMEWHERE</div>
+      <h1 style="margin-top:8px">How do you want to prepare?</h1>
+      <p class="muted" style="margin-top:10px">We'll shape your starting point around you. You can always change direction.</p>
+      <div class="onboardArt" style="margin-top:20px"><svg viewBox="0 0 250 250"><ellipse cx="125" cy="145" rx="84" ry="70" fill="#9b86ee"/><ellipse cx="125" cy="155" rx="55" ry="43" fill="#fff0d0"/><circle cx="105" cy="143" r="5"/><circle cx="145" cy="143" r="5"/><path d="M111 160q14 13 28 0" fill="none" stroke="#191918" stroke-width="4" stroke-linecap="round"/><path d="M66 100l59-43 59 43" fill="#f4c95d" stroke="#191918" stroke-width="4"/><path d="M125 57v-20" stroke="#191918" stroke-width="5"/><circle cx="125" cy="29" r="7" fill="#191918"/></svg></div>
+      <div class="choices"><button class="choice selected">Start from the beginning <span>✓</span></button><button class="choice">I already prepare for my exam <span>→</span></button></div>
+      <button class="cta full" onclick="show('home')">Let's begin →</button><div class="hint">You'll start with a short assessment. No pressure.</div>
+    </div>
+  </div>
 
-<section id="journey" class="screen"><div class="mobile-shell"><Header title="Your journey" back="home"/><div class="mobile-content"><div class="card center"><div class="char" style="margin:auto">★</div><div class="rank">CURRENT RANK</div><div class="rankbig">Captain</div><p class="muted">78 / 100 difficulty</p></div><div class="spacer"></div><div class="list"><div class="card"><span class="pill">CURRENT</span><h3 style="margin-top:10px">Mixed challenge</h3><p class="muted">10 questions · difficulty 78–82</p><button class="btn full" onclick="show('test')">Start challenge</button></div><div class="card"><span class="pill">NEXT</span><h3 style="margin-top:10px">Major</h3><p class="muted">Reach 90+ difficulty consistently.</p></div></div></div><Nav/></div></section>
-
-<section id="test" class="screen"><div class="mobile-shell"><div class="mobile-header"><button class="back" onclick="show('journey')">‹</button><span class="eyebrow">Challenge · 04 / 10</span><button class="back" onclick="show('navigator')">☷</button></div><div class="mobile-content"><div class="progress"><i style="width:40%"></i></div><div class="question">A train travels 240 km in 3 hours. What is its average speed?</div><button class="option" onclick="selectOption(this)">60 km/h</button><button class="option" onclick="selectOption(this)">80 km/h</button><button class="option" onclick="selectOption(this)">90 km/h</button><button class="option" onclick="selectOption(this)">120 km/h</button><div class="top" style="margin-top:25px"><button class="btn secondary" onclick="show('navigator')">Questions</button><button class="btn" onclick="show('results')">Next →</button></div></div></div></section>
-
-<section id="navigator" class="screen"><div class="mobile-shell"><Header title="Questions" back="test"/><div class="mobile-content"><p class="muted">Tap any number to jump to it.</p><div class="grid two" id="qgrid"></div><div class="spacer"></div><button class="btn full" onclick="show('results')">Finish test</button></div></div></section>
-
-<section id="results" class="screen"><div class="mobile-shell"><div class="mobile-content center" style="padding-top:45px"><div class="eyebrow">Test complete</div><h1 style="font-size:64px">82%</h1><p class="lead" style="margin:auto">Good work. Your ability moved forward.</p><div class="grid two" style="margin-top:28px;text-align:left"><div class="card"><div class="eyebrow">Difficulty</div><div class="stat">84</div></div><div class="card"><div class="eyebrow">Accuracy</div><div class="stat">82%</div></div></div><div class="spacer"></div><button class="btn full" onclick="show('analysis')">Analyze this test</button><div class="spacer"></div><button class="btn secondary full" onclick="show('home')">Back home</button></div></div></section>
-
-<section id="analysis" class="screen"><div class="mobile-shell"><Header title="Test analysis" back="results"/><div class="mobile-content"><div class="card"><div class="eyebrow">Diagnosis</div><h3>You know more than your score shows.</h3><p class="muted">4 questions were missed because of time. 2 were knowledge gaps. 1 looks like a pressure error.</p></div><div class="spacer"></div><h3>Why did you miss it?</h3><div class="list"><button class="option">I didn't know how to solve it</button><button class="option">I ran out of time</button><button class="option">I understood it but made a mistake</button><button class="option">I panicked / changed my answer</button></div><div class="spacer"></div><div class="card"><div class="eyebrow">What to work on</div><h3>Speed in quantitative questions</h3><p class="muted">Your correct answers are taking longer than they should. Practice the same difficulty with a shorter time target.</p></div></div></div></section>
-
-<section id="report" class="screen"><div class="mobile-shell"><Header title="Report" back="home"/><div class="mobile-content"><div class="card"><div class="eyebrow">Since your last test</div><div class="stat">+12%</div><p class="muted">Overall ability</p></div><div class="spacer"></div><h3>Where you stand</h3><div class="list"><div class="row"><span>Quantitative</span><b>84</b></div><div class="row"><span>Reasoning</span><b>78</b></div><div class="row"><span>English</span><b>71</b></div><div class="row"><span>General awareness</span><b>66</b></div></div><div class="spacer"></div><div class="card"><div class="eyebrow">Focus next</div><h3>General awareness</h3><p class="muted">This area has moved the least over your last three attempts.</p></div></div></div></section>
-
-<section id="arena" class="screen"><div class="mobile-shell"><Header title="Arena" back="home"/><div class="mobile-content"><div class="card center"><div class="eyebrow">Weekly Trial</div><h2>Sunday · 10:00 AM</h2><p class="muted">45 minutes · 50 questions · ranked</p><button class="btn full">View details</button></div><div class="spacer"></div><div class="grid two"><div class="card"><div class="eyebrow">Mock test</div><h3>Practice under pressure</h3><button class="btn secondary" style="margin-top:10px">Start</button></div><div class="card"><div class="eyebrow">Challenge</div><h3>Find an opponent</h3><button class="btn secondary" style="margin-top:10px">Challenge</button></div></div><div class="spacer"></div><div class="card"><div class="eyebrow">Leaderboard</div><div class="row"><div class="rowleft"><div class="avatar">A</div>Arjun</div><b>94%</b></div><div class="row"><div class="rowleft"><div class="avatar">R</div>Riya</div><b>92%</b></div><div class="row"><div class="rowleft"><div class="avatar">K</div>You</div><b>88%</b></div></div></div><Nav/></div></section>
-
-<section id="profile" class="screen"><div class="mobile-shell"><Header title="Profile" back="home"/><div class="mobile-content center"><div class="char" style="margin:20px auto">★</div><h2>Karan</h2><p class="muted">Captain · 78 ability</p><div class="spacer"></div><div class="list" style="text-align:left"><div class="card">History <span style="float:right">→</span></div><div class="card">Payments <span style="float:right">→</span></div><div class="card">Settings <span style="float:right">→</span></div></div></div><Nav/></div></section>
-
-<section id="mindset" class="screen"><div class="mobile-shell"><Header title="Mindset" back="home"/><div class="mobile-content"><div class="card"><div class="eyebrow">Before you begin</div><h2>Don't chase hours. Chase ability.</h2><p class="muted">A long study session isn't automatically a productive one. Give yourself a small, clear target. Then stop.</p></div><div class="spacer"></div><div class="card"><div class="eyebrow">Remember</div><h3>One bad test doesn't define you.</h3><p class="muted">Use mistakes as information. The goal is to know what to work on next.</p></div></div></div></section>
+  <nav class="bottom">
+    <button class="nav active" onclick="show('home')" data-nav="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Home</button>
+    <button class="nav" onclick="show('progress')" data-nav="progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><path d="M6.5 16.5l4-3M13.5 10.5l4-3"/></svg>Progress</button>
+    <button class="nav" onclick="show('arena')" data-nav="arena"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4h10l2 16H5z"/><path d="M9 8h6M9 12h6"/></svg>Arena</button>
+    <button class="nav" onclick="show('profile')" data-nav="profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 4-7 8-7s7 2 8 7"/></svg>Profile</button>
+  </nav>
 </div>
 <script>
-function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0)}
-function nextAssessment(){show('rank')}
-function selectOption(el){document.querySelectorAll('.option').forEach(x=>x.classList.remove('selected'));el.classList.add('selected')}
-function Header(p){return}
-function Nav(){}
-document.querySelectorAll('.screen').forEach(s=>{});
-const qgrid=document.getElementById('qgrid'); if(qgrid){for(let i=1;i<=10;i++){let b=document.createElement('button');b.className='option center';b.textContent=i+(i<4?' ✓':'');b.onclick=()=>show('test');qgrid.appendChild(b)}}
-function renderChrome(){
-document.querySelectorAll('.screen').forEach(screen=>{
-if(['home','journey','arena','profile'].includes(screen.id)){
-let shell=screen.querySelector('.mobile-shell'); if(!shell)return;
-let nav=document.createElement('div'); nav.className='bottom';
-[['home','Home'],['journey','Journey'],['arena','Arena'],['profile','Profile']].forEach(([id,t])=>{let b=document.createElement('button');b.className='navbtn'+(screen.id===id?' active':'');b.textContent=t;b.onclick=()=>show(id);nav.appendChild(b)});shell.appendChild(nav)
+function show(id){
+ document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelectorAll('.nav').forEach(n=>n.classList.toggle('active', n.dataset.nav===id));
+ window.scrollTo({top:0,behavior:'smooth'});
 }
-});
-document.querySelectorAll('.mobile-shell').forEach(shell=>{shell.querySelectorAll('header').forEach(()=>{})});
+function selectOption(el){
+ document.querySelectorAll('.option').forEach(x=>x.classList.remove('selected'));
+ el.classList.add('selected');
 }
-renderChrome();
-document.querySelectorAll('section.screen').forEach(s=>{});
 </script>
-</body></html>
+</body>
+</html>
