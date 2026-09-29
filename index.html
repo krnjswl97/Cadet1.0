@@ -1,35 +1,114 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Cadet</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--blue:#c3e9fb;--ink:#1a1d2e;--muted:#919194;--green:#66902f;--lime:#76c510;--card:#fff;--line:#e7e8f0;--soft:#f3f3f3;--nav:#fff;}
-*{box-sizing:border-box}html,body{margin:0;width:100%;min-height:100%;font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);background:#e9f6fc}body{display:flex;justify-content:center}.app{width:390px;min-height:844px;height:100dvh;max-height:844px;overflow:hidden;position:relative;background:url('assets/bg-banner.png') center top/100% 100% no-repeat;}
-main{height:calc(100% - 68px);overflow-y:auto;scrollbar-width:none;padding-bottom:16px}main::-webkit-scrollbar{display:none}
-.greeting{padding:25px 36px 0}.greeting .small{font-size:14px;color:#6a6a6d;line-height:1.3}.greeting h1{font-size:23px;line-height:1.15;margin:2px 0 0;font-weight:800;letter-spacing:-.7px}
-.hero{height:285px;position:relative;overflow:hidden;margin-top:0}.hero-text{position:absolute;inset:31px 0 auto;text-align:center;z-index:1}.hero-title{width:235px;height:250px;object-fit:contain;opacity:1;margin:0 auto;display:block}.clouds{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0;pointer-events:none}.platform{position:absolute;width:470px;height:auto;left:50%;transform:translateX(-50%);bottom:-3px;z-index:2}.character{position:absolute;width:120px;height:300px;object-fit:contain;left:50%;transform:translateX(-50%);bottom:6px;z-index:3}
-.card{background:rgba(255,255,255,.94);border:1px solid rgba(205,218,225,.7);border-radius:20px;box-shadow:0 2px 8px rgba(45,74,86,.05)}.rank{margin:-1px 26px 0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 25px;position:relative;z-index:5}.rank-label{font-size:14px;color:#919194}.rank-name{font-size:29px;font-weight:700;color:var(--green);letter-spacing:-1.1px}
-.challenge{margin:20px 26px 0;padding:24px 25px 24px}.tag{display:inline-block;background:#d8f2fc;color:#237ca1;border-radius:8px;padding:7px 10px;font-size:13px;font-weight:600;margin-bottom:24px}.challenge p{margin:0}.challenge .score{font-size:22px;line-height:1.25;font-weight:500}.challenge .score strong{color:var(--green);font-weight:700}.challenge .sub{font-size:14px;color:#b1b2b5;margin-top:6px}.continue{height:50px;width:100%;border:0;border-radius:14px;background:var(--green);color:#fff;font-size:15px;font-weight:600;margin-top:24px}
-.improvement{margin:20px 26px 0;padding:26px 25px;display:flex;align-items:center;gap:16px;min-height:104px}.improvement .num{font-size:27px;color:var(--lime);font-weight:700;letter-spacing:-1px}.improvement .label{font-size:15px;font-weight:500}.improvement .sub{font-size:12px;color:#b3b3b5;margin-top:4px}
-.momentum{margin:20px 26px 0;padding:28px 25px 22px}.momentum-head{display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:500}.days{font-size:13px;color:#73757a}.week{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;margin-top:24px;text-align:center;color:#85868a;font-size:12px}.day .circle{height:34px;width:34px;border-radius:50%;margin:7px auto 0;background:#f3f3f3}.day.hot .circle{background:transparent;font-size:22px;line-height:34px}.day.active .circle{border:1px solid #d9dadd;background:#fff}
-.overwhelmed{margin:20px 26px 0;padding:28px 25px;background:linear-gradient(100deg,#cdeffb,#fff);display:flex;align-items:center;justify-content:space-between;border-color:#bde5f4}.overwhelmed .title{font-size:17px;font-weight:600}.overwhelmed .sub{font-size:12px;color:#a1a5a8;margin-top:7px}.arrow{font-size:26px;color:#777}
-.locked{margin:20px 26px 0;height:75px;background:#f0f0f0;border:0;display:flex;align-items:center;padding:0 25px;gap:14px;color:#b1b1b1}.lock{width:38px;height:38px;border-radius:12px;background:#aaa;display:grid;place-items:center;color:white}.locked .title{font-size:14px;font-weight:600}.locked .sub{font-size:12px;margin-top:2px}
-.bottom{height:68px;position:absolute;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);border-top:1px solid #e1e4e8;display:grid;grid-template-columns:repeat(4,1fr);padding-bottom:env(safe-area-inset-bottom)}.nav{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#9698a0;font-size:11px}.nav.active{color:#5b6be9}.nav svg{width:22px;height:22px;stroke:currentColor}.nav.active svg{fill:currentColor;stroke:currentColor}
+:root{--sky:#e9f6fc;--ink:#1a1d2e;--green:#66902f;--lime:#76c510}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;min-height:100%;font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);background:var(--sky)}
+body{display:flex;justify-content:center}
+.app{width:390px;min-height:844px;height:100dvh;max-height:844px;overflow:hidden;position:relative;background:var(--sky)}
+main{height:calc(100% - 68px);overflow-y:auto;scrollbar-width:none;padding-bottom:24px}
+main::-webkit-scrollbar{display:none}
+.greeting{padding:25px 36px 0;position:relative;z-index:5}
+.greeting .small{font-size:14px;color:#6a6a6d;line-height:1.3}
+.greeting h1{font-size:23px;line-height:1.15;margin:2px 0 0;font-weight:800;letter-spacing:-.7px}
+.hero{height:285px;position:relative;overflow:hidden;background:var(--sky)}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:70px;background:linear-gradient(to bottom,transparent,rgba(233,246,252,.45));z-index:4;pointer-events:none}
+.clouds{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:0}
+.hero-title{position:absolute;width:235px;height:250px;object-fit:contain;left:50%;top:8px;transform:translateX(-50%);z-index:1;display:block}
+.platform{position:absolute;width:470px;height:auto;left:50%;transform:translateX(-50%);bottom:-3px;z-index:2;display:block}
+.character{position:absolute;width:120px;height:300px;object-fit:contain;left:50%;transform:translateX(-50%);bottom:6px;z-index:3;display:block}
+.card{background:rgba(255,255,255,.96);border:1px solid rgba(205,218,225,.72);border-radius:20px;box-shadow:0 2px 8px rgba(45,74,86,.05)}
+.rank{margin:-1px 26px 0;height:92px;display:flex;align-items:center;justify-content:space-between;padding:0 25px;position:relative;z-index:6}
+.rank-label{font-size:14px;color:#919194}
+.rank-name{font-size:29px;font-weight:700;color:var(--green);letter-spacing:-1.1px}
+.challenge{margin:20px 26px 0;padding:24px 25px}
+.tag{display:inline-block;background:#d8f2fc;color:#237ca1;border-radius:8px;padding:7px 10px;font-size:13px;font-weight:600;margin-bottom:24px}
+.challenge p{margin:0}
+.challenge .score{font-size:22px;line-height:1.25;font-weight:500}
+.challenge .score strong{color:var(--green);font-weight:700}
+.challenge .sub{font-size:14px;color:#b1b2b5;margin-top:6px}
+.continue{height:50px;width:100%;border:0;border-radius:14px;background:var(--green);color:#fff;font-size:15px;font-weight:600;margin-top:24px;cursor:pointer;font-family:inherit}
+.improvement{margin:20px 26px 0;padding:26px 25px;display:flex;align-items:center;gap:16px;min-height:104px}
+.improvement .num{font-size:27px;color:var(--lime);font-weight:700}
+.improvement .label{font-size:15px;font-weight:500}
+.improvement .sub{font-size:12px;color:#b3b3b5;margin-top:4px}
+.momentum{margin:20px 26px 0;padding:28px 25px 22px}
+.momentum-head{display:flex;justify-content:space-between;align-items:center;font-size:17px;font-weight:500}
+.days{font-size:13px;color:#73757a}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;margin-top:24px;text-align:center;color:#85868a;font-size:12px}
+.day .circle{height:34px;width:34px;border-radius:50%;margin:7px auto 0;background:#f3f3f3}
+.day.hot .circle{background:transparent;font-size:22px;line-height:34px}
+.day.active .circle{border:1px solid #d9dadd;background:#fff}
+.overwhelmed{margin:20px 26px 0;padding:28px 25px;background:linear-gradient(100deg,#cdeffb,#fff);display:flex;align-items:center;justify-content:space-between;border-color:#bde5f4}
+.overwhelmed .title{font-size:17px;font-weight:600}
+.overwhelmed .sub{font-size:12px;color:#a1a5a8;margin-top:7px}
+.arrow{font-size:26px;color:#777}
+.locked{margin:20px 26px 0;height:75px;background:#f0f0f0;border:0;display:flex;align-items:center;padding:0 25px;gap:14px;color:#b1b1b1}
+.lock{width:38px;height:38px;border-radius:12px;background:#aaa;display:grid;place-items:center;color:white}
+.locked .title{font-size:14px;font-weight:600}.locked .sub{font-size:12px;margin-top:2px}
+.bottom{height:68px;position:absolute;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);border-top:1px solid #e1e4e8;display:grid;grid-template-columns:repeat(4,1fr);padding-bottom:env(safe-area-inset-bottom);z-index:20}
+.nav{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#9698a0;font-size:11px}
+.nav.active{color:#5b6be9}.nav svg{width:22px;height:22px;stroke:currentColor}.nav.active svg{fill:currentColor;stroke:currentColor}
 @media(min-width:600px){body{background:#222}.app{box-shadow:0 20px 80px #0008}}
-</style></head>
-<body><div class="app">
+</style>
+</head>
+<body>
+<div class="app">
 <main>
 <section class="greeting"><div class="small">Good evening,</div><h1>Karan Jaswal</h1></section>
-<section class="hero"><img class="clouds" src="assets/clouds.png"><img class="hero-title" src="assets/lieutenant-text.png"><img class="platform" src="assets/platform.png"><img class="character" src="assets/lieutenant.png"></section>
+
+<section class="hero" aria-label="Current rank illustration">
+<img class="clouds" src="https://raw.githubusercontent.com/krnjswl97/Cadet1.0/main/assets/clouds.png" alt="" aria-hidden="true">
+<img class="hero-title" src="https://raw.githubusercontent.com/krnjswl97/Cadet1.0/main/assets/lieutenant-text.png" alt="Lieutenant">
+<img class="platform" src="https://raw.githubusercontent.com/krnjswl97/Cadet1.0/main/assets/platform.png" alt="" aria-hidden="true">
+<img class="character" src="https://raw.githubusercontent.com/krnjswl97/Cadet1.0/main/assets/lieutenant.png" alt="Cadet character">
+</section>
+
 <section class="rank card"><div class="rank-label">Current Rank</div><div class="rank-name">Lieutenant</div></section>
-<section class="challenge card"><span class="tag">Next Challenge</span><p class="score">Score more than <strong>75%</strong></p><p class="sub">to unlock the next rank</p><button class="continue" onclick="alert('Challenge coming soon')">Continue</button></section>
+
+<section class="challenge card">
+<span class="tag">Next Challenge</span>
+<p class="score">Score more than <strong>75%</strong></p>
+<p class="sub">to unlock the next rank</p>
+<button class="continue" type="button" onclick="alert('Challenge coming soon')">Continue</button>
+</section>
+
 <section class="improvement card"><div class="num">+8%</div><div><div class="label">Improvement from last week</div><div class="sub">That's better than 52% of people</div></div></section>
-<section class="momentum card"><div class="momentum-head"><span>Weekly Momentum</span><span class="days">5/7 Days</span></div><div class="week"><div class="day hot">Mon<div class="circle">🔥</div></div><div class="day active">Tue<div class="circle"></div></div><div class="day active">Wed<div class="circle"></div></div><div class="day active">Thu<div class="circle"></div></div><div class="day hot">Fri<div class="circle">🔥</div></div><div class="day"><span>Sat</span><div class="circle"></div></div><div class="day"><span>Sun</span><div class="circle"></div></div></div></section>
+
+<section class="momentum card">
+<div class="momentum-head"><span>Weekly Momentum</span><span class="days">5/7 Days</span></div>
+<div class="week">
+<div class="day hot">Mon<div class="circle">🔥</div></div>
+<div class="day active">Tue<div class="circle"></div></div>
+<div class="day active">Wed<div class="circle"></div></div>
+<div class="day active">Thu<div class="circle"></div></div>
+<div class="day hot">Fri<div class="circle">🔥</div></div>
+<div class="day">Sat<div class="circle"></div></div>
+<div class="day">Sun<div class="circle"></div></div>
+</div>
+</section>
+
 <section class="overwhelmed card"><div><div class="title">Feeling overwhelmed?</div><div class="sub">Don't worry. It's all going to be okay.</div></div><div class="arrow">→</div></section>
-<section class="locked card"><div class="lock"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div><div><div class="title">Weekly Trial</div><div class="sub">Reach Captain to unlock</div></div></section>
+
+<section class="locked card">
+<div class="lock"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+<div><div class="title">Weekly Trial</div><div class="sub">Reach Captain to unlock</div></div>
+</section>
 </main>
-<nav class="bottom"><div class="nav active"><svg viewBox="0 0 24 24"><path d="M3 10.8 12 3l9 7.8v9.2a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></div><div class="nav"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9z"/></svg><span>Arena</span></div><div class="nav"><svg viewBox="0 0 24 24" fill="none"><path d="M5 20V10M12 20V4M19 20v-7" stroke-width="2" stroke-linecap="round"/></svg><span>Progress</span></div><div class="nav"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4"/><path d="M4 21c.7-4 3.3-6 8-6s7.3 2 8 6" stroke-width="2" stroke-linecap="round"/></svg><span>Profile</span></div></nav>
-</div></body></html>
+
+<nav class="bottom" aria-label="Primary navigation">
+<div class="nav active"><svg viewBox="0 0 24 24"><path d="M3 10.8 12 3l9 7.8v9.2a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Home</span></div>
+<div class="nav"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9z"/></svg><span>Arena</span></div>
+<div class="nav"><svg viewBox="0 0 24 24" fill="none"><path d="M5 20V10M12 20V4M19 20v-7" stroke-width="2" stroke-linecap="round"/></svg><span>Progress</span></div>
+<div class="nav"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4"/><path d="M4 21c.7-4 3.3-6 8-6s7.3 2 8 6" stroke-width="2" stroke-linecap="round"/></svg><span>Profile</span></div>
+</nav>
+</div>
+</body>
+</html>
