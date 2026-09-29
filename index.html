@@ -72,7 +72,7 @@ h1,h2,h3,p{margin:0} h1{font-size:38px;line-height:.98;letter-spacing:-2px} h2{f
         <div class="rankbadge"><svg viewBox="0 0 50 50"><path d="M25 7l5 11 12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1z" fill="#191918"/></svg></div>
         <div style="flex:1"><div class="eyebrow">CURRENT RANK</div><div class="rankname">Captain</div><div class="small muted">78 / 100 difficulty</div><div class="rankline"><span></span></div></div>
       </div>
-      <div class="section journey card" onclick="show('progress')"><div class="journeytop"><div><div class="eyebrow">CONTINUE YOUR JOURNEY</div><h2>Keep moving forward</h2><p class="small muted" style="margin-top:5px">Mixed reasoning · 10 questions</p></div><div class="arrow">→</div></div><div class="path"><div class="dot done">✓</div><div class="pathline"></div><div class="dot done">✓</div><div class="pathline"></div><div class="dot current">3</div><div class="pathline"></div><div class="dot">4</div><div class="pathline"></div><div class="dot">5</div></div></div>
+      <div class="section journey card" onclick="show('progress')"><div class="journeytop"><div><div class="eyebrow">CONTINUE YOUR PREPARATION</div><h2>Keep moving forward</h2><p class="small muted" style="margin-top:5px">Mixed reasoning · 10 questions</p></div><div class="arrow">→</div></div><div class="path"><div class="dot done">✓</div><div class="pathline"></div><div class="dot done">✓</div><div class="pathline"></div><div class="dot current">3</div><div class="pathline"></div><div class="dot">4</div><div class="pathline"></div><div class="dot">5</div></div></div>
       <div class="section grid2"><div class="stat card"><div class="eyebrow">STREAK</div><div class="num">5 days</div><div class="label">this week · keep it going</div></div><div class="stat card"><div class="eyebrow">UPCOMING</div><div class="num">3d</div><div class="label">Weekly Trial</div></div></div>
       <div class="section report card"><div class="eyebrow">YOUR LATEST REPORT</div><div class="delta">+12% since your last test</div><span class="pill">↑ improving</span><p class="small muted" style="margin:12px 0 8px">Maths hasn't moved much. This is where you should focus next.</p><button class="cta" style="margin-top:5px" onclick="show('report')">View report →</button></div>
       <div class="section card" style="padding:16px"><div class="eyebrow">TODAY'S FOCUS</div><div class="focusrow"><div class="subject">Maths</div><div class="bar"><i style="width:42%"></i></div><div class="score">42%</div></div><div class="focusrow"><div class="subject">Reasoning</div><div class="bar"><i style="width:76%"></i></div><div class="score">76%</div></div><div class="focusrow"><div class="subject">GK</div><div class="bar"><i style="width:64%"></i></div><div class="score">64%</div></div></div>
@@ -80,7 +80,7 @@ h1,h2,h3,p{margin:0} h1{font-size:38px;line-height:.98;letter-spacing:-2px} h2{f
   </div>
 
   <div id="progress" class="screen">
-    <header class="top"><button class="iconbtn" onclick="show('home')">←</button><div class="brand">Your journey</div><div style="width:42px"></div></header>
+    <header class="top"><button class="iconbtn" onclick="show('home')">←</button><div class="brand">Progress</div><div style="width:42px"></div></header>
     <main class="page">
       <div class="subhead"><div class="eyebrow">YOUR PATH</div><h1>Earn your next rank.</h1><p class="muted" style="margin-top:9px">The questions get harder as you get better. No XP. No meaningless points.</p></div>
       <div class="card" style="padding:18px;background:linear-gradient(145deg,#fffdf8,#e8e4ff)">
@@ -164,8 +164,8 @@ h1,h2,h3,p{margin:0} h1{font-size:38px;line-height:.98;letter-spacing:-2px} h2{f
 
   <nav class="bottom">
     <button class="nav active" onclick="show('home')" data-nav="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>Home</button>
-    <button class="nav" onclick="show('progress')" data-nav="progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><path d="M6.5 16.5l4-3M13.5 10.5l4-3"/></svg>Progress</button>
     <button class="nav" onclick="show('arena')" data-nav="arena"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4h10l2 16H5z"/><path d="M9 8h6M9 12h6"/></svg>Arena</button>
+    <button class="nav" onclick="show('progress')" data-nav="progress"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="5" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><path d="M6.5 16.5l4-3M13.5 10.5l4-3"/></svg>Progress</button>
     <button class="nav" onclick="show('profile')" data-nav="profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 4-7 8-7s7 2 8 7"/></svg>Profile</button>
   </nav>
 </div>
